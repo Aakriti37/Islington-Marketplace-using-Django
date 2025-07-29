@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+#from django.utils.text import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -12,6 +13,7 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.FloatField()
+    slug = models.SlugField(blank=True, null=True)
     description = models.TextField()
     stock = models.IntegerField(default=1)
     status = models.BooleanField(default=0)
