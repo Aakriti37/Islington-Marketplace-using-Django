@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('id', 'category', 'title', 'content', 'author')
+    list_display = ('id', 'category', 'title', 'content', 'author', 'image_preview')
     search_fields = ("title", )
     list_filter = ("category", )
     readonly_fields = ("image_preview", )
