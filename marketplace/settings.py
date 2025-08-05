@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-2bar&hquf06ftrb4^a1-mtbf_v4@^4zw(ohng@ujo00cyi2+#6
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'summerclass-crjx.onrender.com',     # Render URL
+    # 'summerclass-crjx.onrender.com',     # Render URL
+    'islington-marketplace-using-django.onrender.com',
     '127.0.0.1',                                           # for local development
     'localhost',                                           # Optional
 ]
@@ -88,14 +89,14 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 
-    # 'default': dj_database_url.config(
-    #     default=os.environ.get('DATABASE_URL')
-    # )
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 
 }
 
