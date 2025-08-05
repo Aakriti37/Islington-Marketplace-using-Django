@@ -4,7 +4,7 @@ from . models import Category, Product
 
 def products(request):
    all_products = Product.objects.all()
-   return render(request, 'products/products1.html', {'products': all_products})
+   return render(request, 'products/products.html', {'products': all_products})
 
 
 def product_detail(request, id):
